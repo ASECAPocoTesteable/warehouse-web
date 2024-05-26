@@ -36,7 +36,7 @@ const NavBar = () => {
                     Shipping
                 </button>
             </Link>
-            <Link href="/inventory">
+            <Link href="/DevolutionsOverview">
                 <button style={{
                     backgroundColor: "white",
                     color: "black",
@@ -45,7 +45,7 @@ const NavBar = () => {
                     border: "none",
                     cursor: "pointer"
                 }}>
-                    Inventory
+                    Devolucións
                 </button>
             </Link>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NavBar = ({ orderId, orderStatus }) => {
+const ShippingCard = ({ orderId, orderStatus }) => {
     return (
         <div style={{ backgroundColor: "white", color: "black", padding: "10px", borderRadius: "10px"}}>
             <p>Order ID: {orderId}</p>
@@ -9,4 +9,4 @@ const NavBar = ({ orderId, orderStatus }) => {
     );
 };
 
-export default NavBar;
+export default ShippingCard;
