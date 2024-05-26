@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import NavBar from "@/components/NavBar";
 
 const AddProductPage = () => {
     const options = ["Product 1", "Product 2", "Product 3", "Product 4"];
@@ -16,12 +17,8 @@ const AddProductPage = () => {
     };
 
     return (
-        <div>
-            <div style={{ display: "flex", flexDirection: "row", gap: "20px", width: "100%" }}>
-                <button style={{ backgroundColor: "white", color: "black", flex: "1" }}>Products</button>
-                <button style={{ backgroundColor: "white", color: "black", flex: "1" }}>Shipping</button>
-                <button style={{ backgroundColor: "white", color: "black", flex: "1" }}>Inventory</button>
-            </div>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "30px"}}>
+            <NavBar />
             <div style={{ display: "flex", flexDirection: "column"}}>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "30px"}}>
                     <h1>Add product:</h1>
