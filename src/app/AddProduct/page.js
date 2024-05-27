@@ -45,7 +45,7 @@ const AddProductPage = () => {
                             />
                         </div>
 
-                        <button style={{backgroundColor: "white", color: "black", borderRadius: "5px"}}>Continue</button>
+                        <button style={{backgroundColor: "white", color: "black", borderRadius: "5px"}}>Add</button>
                     </form>
                 </div>
             </div>
