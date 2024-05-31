@@ -36,31 +36,6 @@ const NavBar = () => {
                     Shipping
                 </button>
             </Link>
-            <Link href="/DevolutionsOverview">
-                <button style={{
-                    backgroundColor: "white",
-                    color: "black",
-                    flex: "1",
-                    padding: "10px",
-                    border: "none",
-                    cursor: "pointer"
-                }}>
-                    Devolucións
-                </button>
-            </Link>
-
-            <Link href="/CreateShipment">
-                <button style={{
-                    backgroundColor: "white",
-                    color: "black",
-                    flex: "1",
-                    padding: "10px",
-                    border: "none",
-                    cursor: "pointer"
-                }}>
-                    Create shipment
-                </button>
-            </Link>
         </div>
     );
 };
