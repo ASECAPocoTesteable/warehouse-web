@@ -3,32 +3,38 @@ import React, {useEffect, useState} from "react";
 import NavBar from "@/components/NavBar";
 import ShippingCard from "@/components/ShippingCard";
 import axios from "axios";
-import {toast} from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 const ShipmentOverviewPage = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
         axios
-            .get("http://localhost:8082/product/all")
+            .get("http://warehousesv:8081/order/all")
             .then((response) => {
-                setProducts(response.data);
-                if (response.data.length > 0) {
-                    setSelectedProduct(response.data[0].id); // Set the first product as the default selected option
-                }
+                setOrders(response.data);
             })
             .catch((error) => {
-                console.error("Error fetching products:", error);
-                toast.error("Error fetching products: " + error.message);
+                console.error("Error fetching orders:", error);
+                toast.error("Error fetching orders: " + error.message);
             });
     }, []);
     return (
         <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "30px"}}>
             <NavBar/>
+            <ToastContainer/>
             <div style={{display: "flex", flexDirection: "column"}}>
                 <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "30px"}}>
                     <h1>Shipments overview:</h1>
-                    <ShippingCard orderId="123" initialOrderStatus="to prepare"/>
+                    {orders.length > 0 ?(
+                        orders.map(order => (
+                            <ShippingCard key={order.id} orderId={order.id} status={order.status} orderProducts={order.orderProducts}/>
+                        ))
+                    ): (
+                        <p>No shipments available</p>
+                    )}
+
                 </div>
             </div>
         </div>
