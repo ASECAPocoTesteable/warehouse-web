@@ -13,7 +13,7 @@ const AddProductPage = () => {
 
     const fetchProducts = () => {
         axios
-            .get("http://warehousesv:8081/product/all")
+            .get("http://localhost:8081/product/all")
             .then((response) => {
                 setProducts(response.data);
                 if (response.data.length > 0) {
@@ -40,7 +40,7 @@ const AddProductPage = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.put(`http://warehousesv:8081/product/${selectedProduct}`, {
+        axios.put(`http://localhost:8081/product/${selectedProduct}`, {
             "id": selectedProduct,
             "addedQuantity": quantity
         })
