@@ -12,7 +12,7 @@ const NavBar = () => {
             backgroundColor: "#f8f8f8",
             boxShadow: "0 4px 2px -2px gray"
         }}>
-            <Link href="/AddProduct">
+            <Link href="/addStockToProduct">
                 <button style={{
                     backgroundColor: "white",
                     color: "black",
@@ -24,7 +24,7 @@ const NavBar = () => {
                     Products
                 </button>
             </Link>
-            <Link href="/ShipmentsOverview">
+            <Link href="/shipmentsOverview">
                 <button style={{
                     backgroundColor: "white",
                     color: "black",
