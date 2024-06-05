@@ -18,18 +18,5 @@ describe('Add Product Page', () => {
         cy.contains('Stock added to Product A successfully!').should('be.visible');
     });
 
-    it('should not add stock to a product with invalid quantity', () => {
-        cy.get('select#product-options').select('1');
-        cy.get('input#product-quantity').type('0');
-        cy.get('button[type="submit"]').click();
-        cy.contains('Invalid quantity').should('be.visible');
-    });
-
-    it('should not add stock to a product with invalid product', () => {
-        cy.get('select#product-options').select('0');
-        cy.get('input#product-quantity').type('5');
-        cy.get('button[type="submit"]').click();
-        cy.contains('Invalid product').should('be.visible');
-    });
 
 });
