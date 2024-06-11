@@ -47,7 +47,7 @@ const AddProductPage = () => {
             })
                 .then(() => {
                     const product = products.find(p => p.id === selectedProduct);
-                    toast.success(`Stock added to ${product.name} successfully!`);
+                    toast.success(`Stock added to ${selectedProduct.name} successfully!`);
                     fetchProducts(); // Refresh the products table
                 })
                 .catch((error) => {
