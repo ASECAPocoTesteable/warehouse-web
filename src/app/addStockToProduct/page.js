@@ -39,7 +39,7 @@ const AddProductPage = () => {
     };
 
     const handleSubmit = (event) => {
-        if (quantity <= 0) {
+        if (quantity > 0) {
             event.preventDefault();
             axios.put(`http://localhost:8081/product/${selectedProduct}`, {
                 "id": selectedProduct,
